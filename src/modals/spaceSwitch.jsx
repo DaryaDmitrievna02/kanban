@@ -7,15 +7,15 @@ function SpaceSwitch({ setMenuOpen }) {
 
   return (
     <>
-      <div className="w-full h-full absolute bg-black/25 ">
-        <div className="form w-[400px] m-auto bg-white h-auto rounded-md shadow-md ">
+      <div className="absolute top-[100px] w-[400px]">
+        <div className="form w-full p-4  bg-sky-700 shadow-xl rounded-b-md text-white font-bold">
           {state.map((e, i) => {
             return (
               <>
-                <br></br>
                 <div
+                  className="p-4 mb-2 cursor-pointer border-2 border-white/20 transition-all hover:scale-[1.02]"
                   onClick={() => {
-                    dispatch(taskSlice.actions.switchSpace( state[i]));
+                    dispatch(taskSlice.actions.switchSpace(state[i]));
                     setMenuOpen(false);
                   }}
                 >
