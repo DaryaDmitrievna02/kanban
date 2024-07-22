@@ -15,7 +15,25 @@
 }
 }
 
-
 body{
-    background-color: rgb(255, 215, 200);
+    background-color: #48535967;
+}
+
+
+p,div{
+    color: #485359;
+}
+
+
+h1, h2,h3, button, label{
+    color: #485359;
+}
+
+@layer components{
+    label {
+        @apply mb-2
+    }
+    input{
+        @apply border-2 border-[#485359]/30 p-2 w-full last:pb-0;
+    }
 }

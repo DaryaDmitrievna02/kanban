@@ -1,4 +1,4 @@
-import taskSlice from "../redux/taskSlice";
+import taskSlice from "../../redux/taskSlice";
 import { useSelector, useDispatch } from "react-redux";
 
 function SpaceSwitch({ setMenuOpen }) {
@@ -7,19 +7,21 @@ function SpaceSwitch({ setMenuOpen }) {
 
   return (
     <>
-      <div className="absolute top-[100px] w-[400px]">
-        <div className="form w-full p-4  bg-sky-700 shadow-xl rounded-b-md text-white font-bold">
+      <div className="absolute top-[100px] w-[400px] max-sm:w-2/3">
+        <div className="form w-full p-4  bg-[#C2E9E7] shadow-xl rounded-b-md text-[#485359] font-bold">
+          <h2 className="mb-2">Задачи:</h2>
           {state.map((e, i) => {
             return (
               <>
                 <div
-                  className="p-4 mb-2 cursor-pointer border-2 border-white/20 transition-all hover:scale-[1.02]"
+                  className="flex justify-between p-2 mb-2 cursor-pointer border-b-2 border-b-[#485359]/40 transition-all hover:scale-[1.02]"
                   onClick={() => {
                     dispatch(taskSlice.actions.switchSpace(state[i]));
                     setMenuOpen(false);
                   }}
                 >
-                  {e.name}
+                  <p>{e.name}</p>
+                  {e.isActive ? "✓" : ""}
                 </div>
               </>
             );

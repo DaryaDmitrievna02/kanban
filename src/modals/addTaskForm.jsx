@@ -39,45 +39,53 @@ export const AddTaskForm = ({ isAddFormOpen }) => {
   }
 
   function addTask() {
-    
     dispatch(taskSlice.actions.addTask({ name, newColumn }));
     isAddFormOpen(false);
   }
 
   return (
     <>
-      <div className="w-full h-full absolute bg-black/25 flex justify-center items-center z-20 scrollbar-hide overflow-scroll">
-        <div className="form w-[400px] bg-white h-[600px] rounded-md shadow-md  ">
+      <div className="w-full h-full  bg-black/25 flex justify-center items-center z-20 scrollbar-hide overflow-scroll fixed">
+        <div className="form px-5 py-10 w-[400px] bg-white h-[600px] rounded-md shadow-md overflow-y-auto fixed m-2 max-sm:w-auto">
+          <h2 className="font-bold mb-5 text-lg">Добавить новую доску задач</h2>
           <div>
-            <div className="flex flex-col gap-5">
+            <div className="flex flex-col justify-center">
+              <label>Имя доски задач:</label>
               <input
-                className="border-2 border-black"
+          
+                className="mb-5"
                 type="text"
-                placeholder="add task name"
+                placeholder="Имя доски"
                 onChange={(e) => setName(e.target.value)}
               />
 
               {newColumn.map((column, id) => {
                 return (
                   <>
-                    <input
-                      className="border-2 border-black"
-                      type="text"
-                      placeholder="add task name"
-                      onChange={(e) => {
-                        onChange(column.id, e.target.value);
-                      }}
-                      value={column.name}
-                    ></input>
-                    <button key={column.id} onClick={() => onDelete(column.id)}>
-                      X
-                    </button>
+                    <div className="w-full flex items-center mb-5">
+                      <input
+                        type="text"
+                        placeholder="Имя колонки задач"
+                        onChange={(e) => {
+                          onChange(column.id, e.target.value);
+                        }}
+                        value={column.name}
+                      ></input>
+                      <button
+                        className="px-4 text-[#485359] font-semibold"
+                        key={column.id}
+                        onClick={() => onDelete(column.id)}
+                      >
+                        X
+                      </button>
+                    </div>
                   </>
                 );
               })}
             </div>
 
             <button
+              className="margin-auto w-full p-2 mb-4 border-dotted border-2  border-[#485359]/30 "
               onClick={() =>
                 setNewColumn((prev) => [
                   ...prev,
@@ -85,21 +93,28 @@ export const AddTaskForm = ({ isAddFormOpen }) => {
                 ])
               }
             >
-              ADD COLUMN
+              Добавить колонку +
             </button>
             <br></br>
           </div>
 
-          <button
-            onClick={() => {
-              valid() ? addTask() : false;
-            }}
-          >
-            X
-          </button>
-          <br></br>
+          <div className="flex items-center justify-between gap-5">
+            <button
+              className="border-2 border-[#485359]/20 shadow-md px-4 py-2 rounded-md font-semibold bg-[#C2E9E7]"
+              onClick={() => {
+                valid() ? addTask() : false;
+              }}
+            >
+              Добавить доску
+            </button>
 
-          <button onClick={() => isAddFormOpen(false)}>XXXXXX</button>
+            <button
+              className="border-2 border-[#485359]/20 shadow-md px-4 py-2 rounded-md font-semibold "
+              onClick={() => isAddFormOpen(false)}
+            >
+              Отмена
+            </button>
+          </div>
         </div>
       </div>
     </>

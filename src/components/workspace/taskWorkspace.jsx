@@ -24,7 +24,7 @@ function TaskWorkspace() {
                   {task.col.map((column) => {
                     return (
                       <>
-                        <div className="Task-column w-[400px] h-auto bg-blue-500 p-4">
+                        <div className="Task-column w-[400px] h-auto bg-transparent shadow-lg border-2 border-[#485359]/20 p-4">
                           <h2 className="text-2xl">{column.name}</h2>
                           <div className="flex gap-4 flex-col mt-4 py-4">
                             {column.tasks.map((tasks) => {
