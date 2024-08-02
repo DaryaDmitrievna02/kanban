@@ -16,7 +16,7 @@
 }
 
 body{
-    background-color: #48535967;
+    background-color: #90b1af70;
 }
 
 
@@ -34,6 +34,6 @@ h1, h2,h3, button, label{
         @apply mb-2
     }
     input{
-        @apply border-2 border-[#485359]/30 p-2 w-full last:pb-0;
+        @apply border-2 border-[#485359]/30 p-2 w-full;
     }
 }

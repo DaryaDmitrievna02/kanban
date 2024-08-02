@@ -8,9 +8,8 @@
                     "name": "ToDo",
                     "tasks": [
                         {
-                            "title": "Creacte react app",
-                            "description": "sdfsdf",
-                            "status": "todo",
+                            "title": "Создать задачу",
+                            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
                             "subtasks": [
                                 {
                                     "title": "Env setup",
@@ -25,9 +24,8 @@
                             ]
                         },
                         {
-                            "title": "Creacte react app",
-                            "description": "sdfsdf",
-                            "status": "todo",
+                            "title": "Создать задачу",
+                            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
                             "subtasks": [
                                 {
                                     "title": "Env setup",
@@ -42,9 +40,8 @@
                             ]
                         },
                         {
-                            "title": "Creacte react app",
-                            "description": "sdfsdf",
-                            "status": "todo",
+"title": "Создать задачу",
+                            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
                             "subtasks": [
                                 {
                                     "title": "Env setup",
@@ -64,8 +61,24 @@
                     "name": "Completed",
                     "tasks": [
                         {
-                            "title": "Creacte react app",
-                            "description": "sdfsdf",
+                          "title": "Создать задачу",
+                            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+                            "subtasks": [
+                                {
+                                    "title": "Env setup",
+                                    "description": "asdasdasd",
+                                    "isCompleted": false
+                                },
+                                {
+                                    "title": "Env setup",
+                                    "description": "asdasdasd",
+                                    "isCompleted": false
+                                }
+                            ]
+                        },
+                        {
+                        "title": "Создать задачу",
+                            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
                             "status": "todo",
                             "subtasks": [
                                 {
@@ -81,26 +94,8 @@
                             ]
                         },
                         {
-                            "title": "Creacte react app",
-                            "description": "sdfsdf",
-                            "status": "todo",
-                            "subtasks": [
-                                {
-                                    "title": "Env setup",
-                                    "description": "asdasdasd",
-                                    "isCompleted": false
-                                },
-                                {
-                                    "title": "Env setup",
-                                    "description": "asdasdasd",
-                                    "isCompleted": false
-                                }
-                            ]
-                        },
-                        {
-                            "title": "Creacte react app",
-                            "description": "sdfsdf",
-                            "status": "todo",
+                        "title": "Создать задачу",
+                            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
                             "subtasks": [
                                 {
                                     "title": "Env setup",
@@ -126,9 +121,8 @@
                     "name": "ToDo2",
                     "tasks": [
                         {
-                            "title": "Creacte react app",
-                            "description": "sdfsdf",
-                            "status": "todo",
+                          "title": "Создать задачу",
+                            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
                             "subtasks": [
                                 {
                                     "title": "Env setup",
@@ -143,9 +137,8 @@
                             ]
                         },
                         {
-                            "title": "Creacte react app",
-                            "description": "sdfsdf",
-                            "status": "todo",
+                          "title": "Создать задачу",
+                            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
                             "subtasks": [
                                 {
                                     "title": "Env setup",
@@ -160,9 +153,8 @@
                             ]
                         },
                         {
-                            "title": "Creacte react app",
-                            "description": "sdfsdf",
-                            "status": "todo",
+                            "title": "Создать задачу",
+                            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
                             "subtasks": [
                                 {
                                     "title": "Env setup",
@@ -182,9 +174,8 @@
                     "name": "Completed",
                     "tasks": [
                         {
-                            "title": "Creacte react app",
-                            "description": "sdfsdf",
-                            "status": "todo",
+                          "title": "Создать задачу",
+                            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
                             "subtasks": [
                                 {
                                     "title": "Env setup",
@@ -199,9 +190,8 @@
                             ]
                         },
                         {
-                            "title": "Creacte react app",
-                            "description": "sdfsdf",
-                            "status": "todo",
+                          "title": "Создать задачу",
+                            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
                             "subtasks": [
                                 {
                                     "title": "Env setup",
@@ -216,9 +206,8 @@
                             ]
                         },
                         {
-                            "title": "Creacte react app",
-                            "description": "sdfsdf",
-                            "status": "todo",
+                            "title": "Создать задачу",
+                            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
                             "subtasks": [
                                 {
                                     "title": "Env setup",

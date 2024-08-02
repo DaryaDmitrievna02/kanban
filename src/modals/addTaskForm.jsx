@@ -39,14 +39,15 @@ export const AddTaskForm = ({ isAddFormOpen }) => {
   }
 
   function addTask() {
+ 
     dispatch(taskSlice.actions.addTask({ name, newColumn }));
     isAddFormOpen(false);
   }
 
   return (
     <>
-      <div className="w-full h-full  bg-black/25 flex justify-center items-center z-20 scrollbar-hide overflow-scroll fixed">
-        <div className="form px-5 py-10 w-[400px] bg-white h-[600px] rounded-md shadow-md overflow-y-auto fixed m-2 max-sm:w-auto">
+      <div className="w-full h-full  bg-black/25 flex justify-center items-center z-20 scrollbar-hide overflow-scroll fixed p-5">
+        <div className="form px-5 py-10 w-[400px] max-h-[500px] bg-white  rounded-md shadow-md overflow-y-auto fixed m-2 max-sm:w-[95%]">
           <h2 className="font-bold mb-5 text-lg">Добавить новую доску задач</h2>
           <div>
             <div className="flex flex-col justify-center">
