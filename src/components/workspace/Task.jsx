@@ -25,9 +25,13 @@ function Task({ task, colIndex, taskIndex }) {
         draggable
         className="relative flex flex-col bg-slate-100 rounded-md w-full h-auto py-5 px-2"
       >
-        <div>{task.title}</div>
-        <div>{task.description}</div>
-        <div onClick={()=>deleteTask(colIndex, taskIndex)} className="absolute right-[20px] cursor-pointer">✕</div>
+        <div className="flex justify-between pr-[10px]">
+        <h2 className="font-bold mb-2">{task.title}</h2>
+        <div onClick={()=>deleteTask(colIndex, taskIndex)} className=" cursor-pointer">✕</div>
+        </div>
+     
+        <p className="break-all">{task.description}</p>
+       
       </div>
     </>
   );
