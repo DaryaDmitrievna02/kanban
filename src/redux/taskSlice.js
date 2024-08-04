@@ -1,6 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
 import data from "../data/tasks.json";
-import AddColumn from "../modals/addColumn";
 
 export const taskSlice = createSlice({
   name: "tasks",
@@ -15,24 +14,24 @@ export const taskSlice = createSlice({
     },
 
     addTask: (state, action) => {
-      const empty = state.find(e => e.name != "")
+      const empty = state.find((e) => e.name != "");
 
       const task = {
         name: action.payload.name,
-        isActive: !empty? true:false,
+        isActive: !empty ? true : false,
         col: action.payload.newColumn,
       };
-     
+
       state.push(task);
     },
 
-    deleteTask:(state, action)=>{
-    const newActiveTask = state.find((e) => !e.isActive);
-    if(newActiveTask)
-      newActiveTask.isActive = true;
-    const indexToRemove = state.findIndex((task) => task.name === action.payload.selectedTask); 
-   state.splice(indexToRemove, 1)
-
+    deleteTask: (state, action) => {
+      const newActiveTask = state.find((e) => !e.isActive);
+      if (newActiveTask) newActiveTask.isActive = true;
+      const indexToRemove = state.findIndex(
+        (task) => task.name === action.payload.selectedTask
+      );
+      state.splice(indexToRemove, 1);
     },
 
     addMicroTask: (state, action) => {
@@ -43,21 +42,33 @@ export const taskSlice = createSlice({
       column.tasks.push(action.payload.newTask);
     },
 
+    deleteMicroTask: (state, action) => {
+      const { taskIndex, colIndex } = action.payload;
+      const activeTask = state.find((state) => state.isActive);
+      const activeCol = activeTask.col.find((col, index) => index === colIndex);
+      activeCol.tasks.splice(taskIndex, 1);
+    },
+
     dragTask: (state, action) => {
       const { colIndex, prevColIndex, taskIndex } = action.payload;
       const activeTask = state.find((state) => state.isActive);
-      const prev = activeTask.col.find((col, index) => index===prevColIndex );
+      const prev = activeTask.col.find((col, index) => index === prevColIndex);
       const task = prev.tasks.splice(taskIndex, 1);
-      activeTask.col.find((col, index)=> index ===colIndex).tasks.push(task[0])
-
+      activeTask.col
+        .find((col, index) => index === colIndex)
+        .tasks.push(task[0]);
     },
-
 
     addColumn: (state, action) => {
       const colName = action.payload;
       const activeTask = state.find((state) => state.isActive);
-      activeTask.col.push({name: colName, tasks:[]})
-    }
+      activeTask.col.push({ name: colName, tasks: [] });
+    },
+
+    deleteColumn: (state, action) => {
+      const activeTask = state.find((state) => state.isActive);
+      activeTask.col.splice(action.payload, 1);
+    },
   },
 });
 

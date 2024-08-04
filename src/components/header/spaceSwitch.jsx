@@ -7,7 +7,8 @@ function SpaceSwitch({ setMenuOpen }) {
 
   return (
     <>
-      <div className="absolute top-[100px] w-[400px] max-sm:w-2/3">
+    
+      <div className="absolute z-20 top-[100px] w-[400px] max-sm:w-2/3">
         <div className="form w-full p-4  bg-[#C2E9E7] shadow-xl rounded-b-md text-[#485359] font-bold">
           <h2 className="mb-2">Задачи:</h2>
           {state.map((e, i) => {

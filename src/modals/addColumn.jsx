@@ -29,7 +29,7 @@ function AddColumn(){
               <button
                 className="border-2 border-[#485359]/20 shadow-md px-4 py-2 rounded-md font-semibold bg-[#C2E9E7]"
                 onClick={() => {
-               AddColumn();
+                if(name) AddColumn();
                 }}
               >
                 Добавить колонку

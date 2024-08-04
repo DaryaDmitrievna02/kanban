@@ -1,7 +1,7 @@
 import { useSelector, useDispatch } from "react-redux";
 import DeleteTaskForm from "../../modals/deleteTaskForm";
 import { AddTaskForm } from "../../modals/addTaskForm";
-import { useMemo, useState } from "react";
+import { useState } from "react";
 import AddMicroTaskForm from "../../modals/addMicroTaskForm";
 import AddColumn from '../../modals/addColumn'
 import Header from "../header/header";
@@ -32,6 +32,13 @@ function TaskWorkspace() {
 
   const [microTaskForm, isMicroTaskForm] = useState(false);
   const [addColumnTasks, setAddColumnTasks] = useState();
+
+  const deleteColumn = (colIndex) =>{
+dispatch(taskSlice.actions.deleteColumn(colIndex))
+
+  }
+
+
   return (
     <>
       {microTaskForm && (
@@ -59,7 +66,7 @@ function TaskWorkspace() {
               {task.isActive && (
                 <>
                   <div className="flex gap-10 p-10 flex-wrap">
-                    {task.col.map((column, colIndex) => {
+                    {task.col?.map((column, colIndex) => {
                       return (
                         <>
                           <div
@@ -68,7 +75,11 @@ function TaskWorkspace() {
                             onDragOver={handleOnDragOver}
                             className="Task-column w-[400px] h-auto bg-white shadow-lg border-2 border-[#485359]/20 p-4"
                           >
+                            <div className="relative w-full">
                             <h2 className="text-2xl border-dotted border-b-2 border-[#485359]/30 pb-3">{column.name}</h2>
+                            <div onClick={()=>deleteColumn(colIndex)} className="absolute right-[20px] top-[8px] cursor-pointer">✕</div>
+                            </div>
+                           
                             <div className="flex gap-4 flex-col mt-4 py-4">
                               {column.tasks.map((task, index) => {
                                 return (
